@@ -6,7 +6,7 @@
     RootModule        = 'OSDProgress.psm1'
 
     # Die Versionsnummer dieses Moduls
-    ModuleVersion     = '21.7.1.1'
+    ModuleVersion     = '21.7.1.2'
 
     # Unterstützte PSEditions
     # CompatiblePSEditions = @()
@@ -24,7 +24,7 @@
     Copyright         = '(c) 2021 Christopher Strobel. Alle Rechte vorbehalten.'
 
     # Beschreibung der von diesem Modul bereitgestellten Funktionen
-    Description       = 'Lightweigh OSD Progress screen for OSD deployments'
+    Description       = 'Lightweight OSD Progress screen for OSD deployments'
 
     # Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
     PowerShellVersion = '5.0'
@@ -102,7 +102,7 @@
         PSData = @{
 
             # 'Tags' wurde auf das Modul angewendet und unterstützt die Modulermittlung in Onlinekatalogen.
-            Tags = @('OSD','OSDProgress','Deployment')
+            Tags       = @('OSD', 'OSDProgress', 'Deployment')
 
             # Eine URL zur Lizenz für dieses Modul.
             LicenseUri = 'https://github.com/ChrisStro/OSDProgress/blob/main/LICENSE'
@@ -125,5 +125,4 @@
 
     # Standardpräfix für Befehle, die aus diesem Modul exportiert werden. Das Standardpräfix kann mit "Import-Module -Prefix" überschrieben werden.
     # DefaultCommandPrefix = ''
-
 }
