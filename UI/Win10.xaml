@@ -1,0 +1,82 @@
+﻿<Controls:MetroWindow xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" Name="MainWindow" ResizeMode="NoResize" WindowState="Maximized" UseNoneWindowStyle="True" Topmost="true" WindowStartupLocation="CenterScreen" BorderBrush="Blue"
+		ShowSystemMenuOnRightClick ="false">
+
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+				<!-- <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Red.xaml"/> -->
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Window.Background>
+		<SolidColorBrush Opacity="0.7" Color="#0077D6"/>
+	</Window.Background>
+
+	<Grid>
+		<Button x:Name="Unlock" Width="80" Height="80" BorderThickness="0" Background="Transparent" Style="{DynamicResource MahApps.Styles.Button.Circle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,0">
+			<iconPacks:PackIconModern Width="30" Height="Auto" VerticalAlignment="Center" Kind="unlock" Foreground="white"/>
+		</Button>
+		<StackPanel HorizontalAlignment="Center">
+			<StackPanel Margin="10,100,10,200">
+				<Controls:ProgressRing IsActive="True" Foreground="white" />
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+				<Controls:Badged x:Name="Phase1_Badge" Width="60" Height="Auto" Badge="{Binding Path=BadgeValue}" Margin="10,15,10,0">
+					<iconPacks:PackIconModern x:Name="Phase1_Icon" Width="60" Height="Auto" VerticalAlignment="Center" Kind="Settings" Foreground="white"/>
+				</Controls:Badged>
+
+				<Canvas Width="200" VerticalAlignment="Center">
+					<Line x:Name="Phase2_Line" X2="200" StrokeThickness="5" Stroke="White"/>
+				</Canvas>
+
+				<StackPanel>
+					<Controls:Badged x:Name="Phase2_Badge" Width="80" Height="Auto" Badge="{Binding Path=BadgeValue}" Margin="10,15,10,0">
+						<iconPacks:PackIconMaterial x:Name="Phase2_Icon" Width="80" Height="Auto" Foreground="white" Kind="CloudDownload" />
+					</Controls:Badged>
+				</StackPanel>
+
+				<Canvas Width="200" VerticalAlignment="Center">
+					<Line x:Name="Phase3_Line" Opacity="1" X2="200" StrokeThickness="5" Stroke="White"/>
+				</Canvas>
+
+				<StackPanel>
+					<Controls:Badged x:Name="Phase3_Badge" Width="60" Height="Auto" Badge="{Binding Path=BadgeValue}" Margin="10,15,10,0">
+						<iconPacks:PackIconModern x:Name="Phase3_Icon" Width="60" Height="Auto" VerticalAlignment="Center" Kind="monitor" Foreground="white"/>
+					</Controls:Badged>
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,50,0,50">
+				<Label x:Name="Step_Status" Content="Step_Status" FontSize="30" Foreground="White"/>
+			</StackPanel>
+
+			<StackPanel x:Name="Progress_StackPanel" Visibility="Hidden">
+				<Grid>
+					<ProgressBar x:Name="Progress" Value="0" Minimum="0" Maximum="100" Height="25"/>
+					<TextBlock Text="{Binding ElementName=Progress, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17" Foreground="White"/>
+				</Grid>
+			</StackPanel>
+		</StackPanel>
+		<StackPanel x:Name="Error_StackPanel" Margin="0,250,0,0" Visibility="Collapsed">
+			<Grid>
+				<!-- <Rectangle Width="650" Height="50" Fill="#ff5757" Stroke="White" StrokeThickness="3" RadiusX="10" RadiusY="10"/> -->
+				<!-- Default -->
+				<Rectangle Width="{x:Static SystemParameters.PrimaryScreenWidth}" Height="80" Fill="#ff5757" Stroke="White" StrokeThickness="3"/>
+				<!-- <Rectangle Width="{x:Static SystemParameters.VirtualScreenWidth}" Height="50" Fill="#ff5757" Stroke="White" StrokeThickness="3" RadiusX="10" RadiusY="10"/> -->
+				<!-- Rounded corners -->
+				<!-- <Rectangle Width="{x:Static SystemParameters.PrimaryScreenWidth}" Height="80" Fill="#ff5757" Stroke="White" StrokeThickness="3" RadiusX="10" RadiusY="10"/> -->
+				<Label x:Name="Error_Label" Content="Error" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Foreground="Black"/>
+			</Grid>
+		</StackPanel>
+		<Label x:Name="Step_Text" Content="" FontSize="20" Foreground="White" HorizontalContentAlignment="Center" Margin="0,580,0,0"/>
+		<Label Name="File_Label" Content="" FontSize="20" Foreground="White" HorizontalAlignment="Center" Margin="0,660,0,0"/>
+	</Grid>
+</Controls:MetroWindow>
