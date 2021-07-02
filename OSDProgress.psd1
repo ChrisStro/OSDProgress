@@ -6,7 +6,7 @@
     RootModule        = 'OSDProgress.psm1'
 
     # Die Versionsnummer dieses Moduls
-    ModuleVersion     = '21.7.2.3'
+    ModuleVersion     = '21.7.2.4'
 
     # Unterstützte PSEditions
     # CompatiblePSEditions = @()

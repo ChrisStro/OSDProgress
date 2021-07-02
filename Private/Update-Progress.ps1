@@ -28,6 +28,11 @@ function Update-Progress {
         $updateHash = [ordered]@{}
         if ($Phase) {
             $ProgressUI.Phase = "Phase" + $Phase
+            $updateHash += [ordered]@{
+                Progress = @{
+                    Value = 0
+                }
+            }
             $updateHash += switch ($Phase) {
                 "2" {
                     [ordered]@{

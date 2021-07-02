@@ -44,7 +44,7 @@ function Save-OSDProgressFile {
             $fileName = $DestinationFile | Split-Path -Leaf
             if ((Test-UI) -or (Test-PipeServer)) {
                 Write-Verbose "Display Progressbar for $fileName"
-                Update-OSDProgress -DisplayBar -DownloadFile $fileName -PercentComplete 1
+                Update-OSDProgress -DisplayBar -DownloadFile $fileName
             }
 
             if ($DestinationFile -match '^\.\\') {
