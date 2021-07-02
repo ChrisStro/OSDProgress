@@ -47,25 +47,22 @@ function Update-OSDProgress {
     Param (
         [Parameter(Position = 0, ParameterSetName = "Phase")]
         [ValidateSet("2", "3", "Finish")]
-        $Phase,
+        [string]$Phase,
 
         [Parameter(Position = 1, ParameterSetName = "Phase")]
         [string]$Text,
 
-        [Parameter(ValueFromPipeline, Mandatory = $false, ParameterSetName = "Download")]
+        [Parameter(ValueFromPipeline, ParameterSetName = "Download")]
         [ValidateRange(1 , 100)]
         [int]$PercentComplete,
 
-        [Parameter(ParameterSetName = "Display-Bar")]
-        [Parameter(ParameterSetName = "Hide-Bar")]
-        [Parameter(ParameterSetName = "Download-File")]
         [Parameter(ParameterSetName = "Download")]
         [string]$DownloadFile,
 
-        [Parameter(ParameterSetName = "Display-Bar")]
+        [Parameter(ParameterSetName = "Download")]
         [switch]$DisplayBar,
 
-        [Parameter(ParameterSetName = "Hide-Bar")]
+        [Parameter(ParameterSetName = "Download")]
         [switch]$HideBar,
 
         [Parameter(ParameterSetName = "Display-Error")]

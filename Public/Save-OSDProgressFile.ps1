@@ -171,5 +171,6 @@ function Save-OSDProgressFile {
 
     End {
         Update-OSDProgress -HideBar -DownloadFile " "
+        Update-OSDProgress -PercentComplete 0
     }
 }

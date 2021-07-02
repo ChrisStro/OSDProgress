@@ -84,7 +84,7 @@ Watch-OSDCloudProvisioning {
     Write-Host  -ForegroundColor Magenta "Doing stuff after"
 }
 ```
-[Note: little example script on git](https://github.com/ChrisStro/OSDCloud/edit/main/Win10_ZTI-OSDProgess.ps1)
+[Note: little example scripts can be found here](https://github.com/ChrisStro/OSDProgress/tree/main/Examples)
 
 If `Start-OSDProgress` is used before `Watch-OSDCloudProvisioning` it will update the prestarted progress screen, else it will automatically spawn a new using `Invoke-OSDProgress`
 
