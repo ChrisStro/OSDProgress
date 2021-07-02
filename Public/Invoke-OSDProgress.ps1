@@ -5,8 +5,11 @@ Starts Progress UI in current powershell process
 .DESCRIPTION
 Starts Progress UI in current powershell process
 
-.PARAMETER Windows
+.PARAMETER Window
 Progress UI that runs in windowed mode, good for testing/development
+
+.PARAMETER TemplateFile
+Enter path to a template file to modify icons and phase messages
 
 .PARAMETER Style
 Apply Win10 (default) or Win11 (not finished) layout

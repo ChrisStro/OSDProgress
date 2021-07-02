@@ -1,3 +1,28 @@
+<#
+.SYNOPSIS
+Function to monitor OSDCloud progress with OSDProgress
+
+.DESCRIPTION
+Function to monitor OSDCloud progress with OSDProgress
+
+.PARAMETER OSDCloudScript
+Enter your OSDCloud script content here
+
+.PARAMETER Window
+Progress UI that runs in windowed mode, good for testing/development
+
+.PARAMETER Style
+Apply Win10 (default) or Win11 (not finished) layout
+
+.PARAMETER TemplateFile
+Enter path to a template file to modify icons and phase messages
+
+.EXAMPLE
+Watch-OSDCloudProvisioning { Start-OSDCloud -OSBuild 20H2 -OSEdition Pro -ZTI }
+
+# Really simple example
+
+#>
 function Watch-OSDCloudProvisioning {
     [CmdletBinding()]
     param (
@@ -29,7 +54,7 @@ function Watch-OSDCloudProvisioning {
             ###################################################
             $OSDModuleInstalled = Test-OSDModule
             if (!$OSDModuleInstalled) {
-                throw "Could not detect David Saguras OSD Module"
+                throw "Could not detect David Seguras OSD Module"
             }
 
             # Override 'Save-WebFile' function of OSD module

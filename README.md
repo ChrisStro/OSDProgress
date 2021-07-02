@@ -31,7 +31,7 @@
 
 # Description
 
-OSDProgress is a PowerShell Gallery module to display a Lightweight  progress screen during deployments or other installation.Primary intention was to give [David Seguras OSDCloud Module](https://osdcloud.osdeploy.com/) a Windows like progress screen,without the need of any code modification to Davids module.But you can use this module easily in any situation where you need some kind of progress visualization to notify your end users.
+OSDProgress is a PowerShell Gallery module to display a Lightweight  progress screen during deployments or other installation. Primary intention was to give [David Seguras OSDCloud Module](https://osdcloud.osdeploy.com/) a Windows like progress screen,without the need of any code modification to Davids module.But you can use this module easily in any situation where you need some kind of progress visualization to notify your end users.
 
 # How it works
 ## General

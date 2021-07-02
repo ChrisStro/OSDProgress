@@ -5,8 +5,15 @@ Start OSDProgress in current process and create an Named Pipe for inter-process 
 .DESCRIPTION
 Start OSDProgress in current process and create an Named Pipe for inter-process communication
 
-.PARAMETER Windows
+.PARAMETER Window
 Start OSDProgress in windowed mode, useful for dev of custom functions
+
+.PARAMETER TemplateFile
+Enter path to a template file to modify icons and phase messages
+
+.PARAMETER Style
+Apply Win10 (default) or Win11 (not finished) layout
+
 #>
 function Start-OSDProgress {
     [CmdletBinding()]

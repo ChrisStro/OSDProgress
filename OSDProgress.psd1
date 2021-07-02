@@ -6,7 +6,7 @@
     RootModule        = 'OSDProgress.psm1'
 
     # Die Versionsnummer dieses Moduls
-    ModuleVersion     = '21.7.1.2'
+    ModuleVersion     = '21.7.2.2'
 
     # Unterstützte PSEditions
     # CompatiblePSEditions = @()
@@ -24,7 +24,7 @@
     Copyright         = '(c) 2021 Christopher Strobel. Alle Rechte vorbehalten.'
 
     # Beschreibung der von diesem Modul bereitgestellten Funktionen
-    Description       = 'Lightweight OSD Progress screen for OSD deployments'
+    Description       = 'Lightweight Progress screen for Powershell driven OSD'
 
     # Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
     PowerShellVersion = '5.0'

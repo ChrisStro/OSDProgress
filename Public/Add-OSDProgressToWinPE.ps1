@@ -78,7 +78,7 @@ function Add-OSDProgressToWinPE {
     begin {
         if ($OSDCloud) {
             if (!(Test-OSDModule)) {
-                Write-Warning "Could not detect David Saguras OSD Module"
+                Write-Warning "Could not detect David Seguras OSD Module"
                 break
             }
 
